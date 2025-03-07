@@ -1,0 +1,229 @@
+package com.myprofile.employeespayroll;
+
+import java.text.DecimalFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
+
+public class EmployeesPayroll {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter Employee Number: ");
+        int empNumber = scanner.nextInt();
+        
+        switch (empNumber) {
+            case 10001:
+                processEmployee(10001, "Garcia, Manuel III", "Chief Executive Officer", 
+                        LocalDate.of(1983, 10, 11), "Valero Carpark Building Valero Street 1227, Makati City", 
+                        "966-860-270", "44-4506057-3", "691295330870", "820126853951", "442-605-657-000", 
+                        new double[]{16598.21, 18133.93, 19196.43, 17910.71}, 
+                        new double[]{48.65, 50.48, 47.50, 43.82}, 1500, 2000, 1000);
+                break;
+            case 10002:
+                processEmployee(10002, "Lim, Antonio", "Chief Operating Officer", 
+                        LocalDate.of(1988, 6, 19), "San Antonio De Padua 2, Block 1 Lot 8 and 2, Dasmarinas, Cavite", 
+                        "171-867-411", "52-2061274-9", "663904995411", "331735646338", "6639049954110", 
+                        new double[]{10488.10, 10815.48, 9136.90, 9482.14}, 
+                        new double[]{49.42, 48.97, 46.25, 46.50}, 1500, 2000, 1000);
+                break;
+            case 10003:
+                processEmployee(10003, "Aquino, Bianca Sofia", "Chief Finance Officer", 
+                        LocalDate.of(1989, 8, 4), "Rm. 402 4/F Jiao Building Timog Avenue Cor. Quezon Avenue 1100, Quezon City", 
+                        "966-889-370", "30-8870406-2", "171519773969", "177451189665", "971-711-280-000", 
+                        new double[]{10369.05, 11208.33, 10940.48, 10636.90}, 
+                        new double[]{45.22, 43.95, 46.02, 40.60}, 1500, 2000, 1000);
+                break;
+            case 10004:
+                processEmployee(10004, "Reyes, Isabella", "Chief Marketing Officer", 
+                        LocalDate.of(1994, 6, 16), "460 Solanda Street Intramuros 1000, Manila", 
+                        "786-868-477", "40-2511815-0", "416946776041", "341911411254", "876-809-437-000", 
+                        new double[]{11053.57, 11363.10, 11178.57, 12750.00}, 
+                        new double[]{40.80, 45.93, 43.95, 43.58}, 1500, 2000, 1000);
+                break;
+            case 10005:
+                processEmployee(10005, "Hernandez, Eduard", "IT Operations and Systems", 
+                        LocalDate.of(1989, 9, 23), "National Highway, Gingoog,  Misamis Occidental", 
+                        "088-861-012", "50-5577638-1", "952347222457", "957436191812", "031-702-374-000", 
+                        new double[]{10089.86, 11108.55, 9760.67, 9306.08}, 
+                        new double[]{43.45, 41.32, 42.50, 43.45}, 1500, 1000, 1000);
+                break;
+            case 10006:
+                processEmployee(10006, "Villanueva, Andrea Mae", "HR Manager", 
+                        LocalDate.of(1988, 2, 14), "17/85 Stracke Via Suite 042, Poblacion, Las Piñas 4783 Dinagat Islands", 
+                        "918-621-603", "49-1632020-8", "441093369646", "382189453145", "317-674-022-000", 
+                         new double[]{10513.10, 10272.74, 9687.52, 10016.71}, 
+                         new double[]{45.92, 43.62, 44.23, 48.40}, 1500, 1000, 1000);
+                break;
+            case 10007:
+                processEmployee(10007, "San Jose, Brad ", "HR Team Leader", 
+                        LocalDate.of(1996, 3, 15), "99 Strosin Hills, Poblacion, Bislig 5340 Tawi-Tawi", 
+                        "797-009-261", "40-2400714-1", "4210850209964", "239192926939", "672-474-690-000", 
+                         new double[]{8727.17, 8552.37, 8428.73, 8812.43}, 
+                         new double[]{45.92, 43.62, 44.23, 48.40}, 1500, 800, 800);
+                break;
+            case 10008:
+                processEmployee(10008, "Romualdez, Alice ", "HR Rank and File", 
+                        LocalDate.of(1992, 5, 14), "12A/33 Upton Isle Apt. 420, Roxas City 1814 Surigao del Norte", 
+                        "983-606-799", "55-4476527-2", "211385556888", "545652640232", "888-572-294-000", 
+                         new double[]{4415.18, 4667.41, 4214.29, 4071.43}, 
+                         new double[]{42.03, 47.18, 41, 44.63}, 1500, 500, 500);
+                break;
+            case 10009:
+                processEmployee(10009, "Atienza, Rosie  ", "HR Rank and File", 
+                        LocalDate.of(1948, 09, 24), "12A/33 Upton Isle Apt. 420, Roxas City 1814 Surigao del Norte", 
+                        "983-606-799", "55-4476527-2", "211385556888", "545652640232", "888-572-294-000", 
+                         new double[]{4415.18, 4667.41, 4214.29, 4071.43}, 
+                         new double[]{42.03, 47.18, 41, 44.63}, 1500, 500, 500);
+                break;
+            default:
+                System.out.println("Employee not found.");
+        }
+        scanner.close();
+    }
+
+    private static void processEmployee(int employeeNumber, String employeeName, String employeePosition, 
+                                        LocalDate birthday, String employeeAddress, String phoneNumber, 
+                                        String SSSNumber, String PagIbigNumber, String PhilHealthNumber, 
+                                        String TINNumber, double[] grossSalaries, double[] hoursWorked, 
+                                        double totalRiceSubsidy, double totalPhoneAllowance, double totalClothingAllowance) {
+        double grossMonthlySalary = 0;
+        for (double salary : grossSalaries) {
+            grossMonthlySalary += salary;
+        }
+                
+        double sss = calculateSSS(grossMonthlySalary);
+        double philHealth = calculatePhilHealth(grossMonthlySalary);
+        double pagIbig = 0.02 * grossMonthlySalary;
+        double incomeTax = calculateTax(grossMonthlySalary);
+        
+        double riceSubsidyPerPeriod = totalRiceSubsidy / 4;
+        double phoneAllowancePerPeriod = totalPhoneAllowance / 4;
+        double clothingAllowancePerPeriod = totalClothingAllowance / 4;
+
+        for (int i = 0; i < 4; i++) {
+            boolean applyDeductions = (i == 3);
+            printPayroll("June " + (3 + (i * 7)) + " - " + (7 + (i * 7)) + ", 2024",
+                employeeNumber, employeeName, employeePosition, birthday,
+                employeeAddress, phoneNumber, SSSNumber, PagIbigNumber,
+                PhilHealthNumber, TINNumber, (int) hoursWorked[i], grossSalaries[i],
+                riceSubsidyPerPeriod, phoneAllowancePerPeriod, clothingAllowancePerPeriod,
+                applyDeductions ? sss : 0, applyDeductions ? philHealth : 0,
+                applyDeductions ? pagIbig : 0, applyDeductions ? incomeTax : 0
+            );
+        }
+    }
+
+    private static double calculateSSS(double salary) {
+        if (salary < 3250) return 135.00;
+        else if (salary < 3750) return 157.50;
+        else if (salary < 4250) return 180.00;
+        else if (salary < 4750) return 202.50;
+        else if (salary < 5250) return 225.00;
+        else if (salary < 5750) return 247.50;
+        else if (salary < 6250) return 270.00;
+        else if (salary < 6750) return 292.50;
+        else if (salary < 7250) return 315.00;
+        else if (salary < 7750) return 337.50;
+        else if (salary < 8250) return 360.00;
+        else if (salary < 8750) return 382.50;
+        else if (salary < 9250) return 405.00;
+        else if (salary < 9750) return 427.50;
+        else if (salary < 10250) return 450.00;
+        else if (salary < 10750) return 472.50;
+        else if (salary < 11250) return 495.00;
+        else if (salary < 11750) return 517.50;
+        else if (salary < 12250) return 540.00;
+        else if (salary < 12750) return 562.50;
+        else if (salary < 13250) return 585.00;
+        else if (salary < 13750) return 607.50;
+        else if (salary < 14250) return 630.00;
+        else if (salary < 14750) return 652.50;
+        else if (salary < 15250) return 675.00;
+        else if (salary < 15750) return 697.50;
+        else if (salary < 16250) return 720.00;
+        else if (salary < 16750) return 742.50;
+        else if (salary < 17250) return 765.00;
+        else if (salary < 17750) return 787.50;
+        else if (salary < 18250) return 810.00;
+        else if (salary < 18750) return 832.50;
+        else if (salary < 19250) return 855.00;
+        else if (salary < 19750) return 877.50;
+        else if (salary < 20250) return 900.00;
+        else if (salary < 20750) return 922.50;
+        else if (salary < 21250) return 945.00;
+        else if (salary < 21750) return 967.50;
+        else if (salary < 22250) return 990.00;
+        else if (salary < 22750) return 1012.50;
+        else if (salary < 23250) return 1035.00;
+        else if (salary < 23750) return 1057.50;
+        else if (salary < 24250) return 1080.00;
+        else if (salary < 24750) return 1102.50;
+        else return 1125.00;
+    }
+
+        private static double calculatePhilHealth(double salary) {
+         if (salary <= 10000) {
+            return 300.00; // Minimum PhilHealth contribution
+        } else if (salary <= 59999.99) {
+            return salary * 0.03 / 2; // 3% of salary, split between employer & employee
+        } else {
+            return 1800.00; // Maximum PhilHealth contribution
+        }
+    }
+        
+        private static double calculateTax(double salary) {
+        if (salary <= 20832) {
+            return 0;
+        } else if (salary <= 33333) {
+            return (salary - 20832) * 0.20;
+        } else if (salary <= 66667) {
+            return 2500 + (salary - 33333) * 0.25;
+        } else if (salary <= 166667) {
+            return 10833 + (salary - 66667) * 0.30;
+        } else {
+            return 40833 + (salary - 166667) * 0.32;
+        }
+    }
+
+     private static void printPayroll(String period, int empNum, String empName, 
+                                     String position, LocalDate dob, String address, 
+                                     String phone, String sssNum, String pagIbigNum, 
+                                     String philHealthNum, String tinNum, int hours, 
+                                     double gross, double riceSubsidy, double phoneAllowance, 
+                                     double clothingAllowance, double sss, double philHealth, 
+                                     double pagIbig, double tax) {
+        DecimalFormat df = new DecimalFormat("#,##0.00");
+        double totalDeductions = sss + philHealth + pagIbig + tax;
+        double totalAllowances = riceSubsidy + phoneAllowance + clothingAllowance;
+        double netPay = gross + totalAllowances - totalDeductions;
+        
+    
+
+        System.out.println("=====================================");
+        System.out.println("       Employees Weekly Payroll      ");
+        System.out.println("=====================================");
+        System.out.println(period);
+        System.out.println("Employee Number: " + empNum);
+        System.out.println("Employee Name: " + empName);
+        System.out.println("Position: " + position);
+        System.out.println("Birthday: " + dob.format(DateTimeFormatter.ofPattern("MM-dd-yyyy")));
+        System.out.println("Address: " + address);
+        System.out.println("Phone Number: " + phone);
+        System.out.println("SSS Number: " + sssNum);
+        System.out.println("Pag-IBIG Number: " + pagIbigNum);
+        System.out.println("PhilHealth Number: " + philHealthNum);
+        System.out.println("TIN Number: " + tinNum);
+        System.out.println();
+        System.out.println("Allowances:");
+        System.out.println("Rice Subsidy: " + df.format(riceSubsidy));
+        System.out.println("Phone Allowance: " + df.format(phoneAllowance));
+        System.out.println("Clothing Allowance: " + df.format(clothingAllowance));
+        System.out.println();
+        System.out.println("Hours Worked: " + hours);
+        System.out.println("Gross Salary: " + df.format(gross));
+        System.out.println("Deductions: SSS: " + df.format(sss) + " | PhilHealth: " + df.format(philHealth) + " | Pag-IBIG: " + df.format(pagIbig) + " | Tax: " + df.format(tax));
+        System.out.println("Net Pay: " + df.format(netPay));
+        System.out.println();
+    }
+}
