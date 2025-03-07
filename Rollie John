@@ -106,7 +106,7 @@ public class EmployeesPayroll {
             printPayroll("June " + (3 + (i * 7)) + " - " + (7 + (i * 7)) + ", 2024",
                 employeeNumber, employeeName, employeePosition, birthday,
                 employeeAddress, phoneNumber, SSSNumber, PagIbigNumber,
-                PhilHealthNumber, TINNumber, (int) hoursWorked[i], grossSalaries[i],
+                PhilHealthNumber, TINNumber, hoursWorked[i], grossSalaries[i],
                 riceSubsidyPerPeriod, phoneAllowancePerPeriod, clothingAllowancePerPeriod,
                 applyDeductions ? sss : 0, applyDeductions ? philHealth : 0,
                 applyDeductions ? pagIbig : 0, applyDeductions ? incomeTax : 0
@@ -189,11 +189,12 @@ public class EmployeesPayroll {
      private static void printPayroll(String period, int empNum, String empName, 
                                      String position, LocalDate dob, String address, 
                                      String phone, String sssNum, String pagIbigNum, 
-                                     String philHealthNum, String tinNum, int hours, 
+                                     String philHealthNum, String tinNum, double hours, 
                                      double gross, double riceSubsidy, double phoneAllowance, 
                                      double clothingAllowance, double sss, double philHealth, 
                                      double pagIbig, double tax) {
         DecimalFormat df = new DecimalFormat("#,##0.00");
+        double hoursWorked = hours;
         double totalDeductions = sss + philHealth + pagIbig + tax;
         double totalAllowances = riceSubsidy + phoneAllowance + clothingAllowance;
         double netPay = gross + totalAllowances - totalDeductions;
@@ -220,7 +221,7 @@ public class EmployeesPayroll {
         System.out.println("Phone Allowance: " + df.format(phoneAllowance));
         System.out.println("Clothing Allowance: " + df.format(clothingAllowance));
         System.out.println();
-        System.out.println("Hours Worked: " + hours);
+        System.out.println("Hours Worked: " + df.format (hours));
         System.out.println("Gross Salary: " + df.format(gross));
         System.out.println("Deductions: SSS: " + df.format(sss) + " | PhilHealth: " + df.format(philHealth) + " | Pag-IBIG: " + df.format(pagIbig) + " | Tax: " + df.format(tax));
         System.out.println("Net Pay: " + df.format(netPay));
