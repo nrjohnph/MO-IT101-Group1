@@ -17,64 +17,71 @@ public class EmployeesPayroll {
                 processEmployee(10001, "Garcia, Manuel III", "Chief Executive Officer", 
                         LocalDate.of(1983, 10, 11), "Valero Carpark Building Valero Street 1227, Makati City", 
                         "966-860-270", "44-4506057-3", "691295330870", "820126853951", "442-605-657-000", 
-                        new double[]{16598.21, 18133.93, 19196.43, 17910.71}, 
+                        new double[]{16598.21, 18133.93, 18167.86, 17042.86}, 
                         new double[]{48.65, 50.48, 47.50, 43.82}, 1500, 2000, 1000);
                 break;
             case 10002:
                 processEmployee(10002, "Lim, Antonio", "Chief Operating Officer", 
                         LocalDate.of(1988, 6, 19), "San Antonio De Padua 2, Block 1 Lot 8 and 2, Dasmarinas, Cavite", 
                         "171-867-411", "52-2061274-9", "663904995411", "331735646338", "6639049954110", 
-                        new double[]{10488.10, 10815.48, 9136.90, 9482.14}, 
+                        new double[]{10488.10, 10815.48, 9136.90, 8792.86}, 
                         new double[]{49.42, 48.97, 46.25, 46.50}, 1500, 2000, 1000);
                 break;
             case 10003:
                 processEmployee(10003, "Aquino, Bianca Sofia", "Chief Finance Officer", 
                         LocalDate.of(1989, 8, 4), "Rm. 402 4/F Jiao Building Timog Avenue Cor. Quezon Avenue 1100, Quezon City", 
                         "966-889-370", "30-8870406-2", "171519773969", "177451189665", "971-711-280-000", 
-                        new double[]{10369.05, 11208.33, 10940.48, 10636.90}, 
+                        new double[]{10369.05, 11208.33, 10940.48, 10004.76}, 
                         new double[]{45.22, 43.95, 46.02, 40.60}, 1500, 2000, 1000);
                 break;
             case 10004:
                 processEmployee(10004, "Reyes, Isabella", "Chief Marketing Officer", 
                         LocalDate.of(1994, 6, 16), "460 Solanda Street Intramuros 1000, Manila", 
                         "786-868-477", "40-2511815-0", "416946776041", "341911411254", "876-809-437-000", 
-                        new double[]{11053.57, 11363.10, 11178.57, 12750.00}, 
+                        new double[]{10392.86, 1009.52, 11000.00, 11942.86}, 
                         new double[]{40.80, 45.93, 43.95, 43.58}, 1500, 2000, 1000);
                 break;
             case 10005:
                 processEmployee(10005, "Hernandez, Eduard", "IT Operations and Systems", 
                         LocalDate.of(1989, 9, 23), "National Highway, Gingoog,  Misamis Occidental", 
                         "088-861-012", "50-5577638-1", "952347222457", "957436191812", "031-702-374-000", 
-                        new double[]{10089.86, 11108.55, 9760.67, 9306.08}, 
+                        new double[]{10005.21, 10084.63, 9760.67, 9306.08}, 
                         new double[]{43.45, 41.32, 42.50, 43.45}, 1500, 1000, 1000);
                 break;
             case 10006:
                 processEmployee(10006, "Villanueva, Andrea Mae", "HR Manager", 
                         LocalDate.of(1988, 2, 14), "17/85 Stracke Via Suite 042, Poblacion, Las Piñas 4783 Dinagat Islands", 
                         "918-621-603", "49-1632020-8", "441093369646", "382189453145", "317-674-022-000", 
-                         new double[]{10513.10, 10272.74, 9687.52, 10016.71}, 
+                         new double[]{10324.99, 9514.04, 9687.52, 10016.71}, 
                          new double[]{45.92, 43.62, 44.23, 48.40}, 1500, 1000, 1000);
                 break;
             case 10007:
                 processEmployee(10007, "San Jose, Brad ", "HR Team Leader", 
                         LocalDate.of(1996, 3, 15), "99 Strosin Hills, Poblacion, Bislig 5340 Tawi-Tawi", 
                         "797-009-261", "40-2400714-1", "4210850209964", "239192926939", "672-474-690-000", 
-                         new double[]{8727.17, 8552.37, 8428.73, 8812.43}, 
+                         new double[]{7033.75, 7854.02, 8062.93, 8359.66}, 
                          new double[]{45.92, 43.62, 44.23, 48.40}, 1500, 800, 800);
                 break;
             case 10008:
                 processEmployee(10008, "Romualdez, Alice ", "HR Rank and File", 
                         LocalDate.of(1992, 5, 14), "12A/33 Upton Isle Apt. 420, Roxas City 1814 Surigao del Norte", 
                         "983-606-799", "55-4476527-2", "211385556888", "545652640232", "888-572-294-000", 
-                         new double[]{4415.18, 4667.41, 4214.29, 4071.43}, 
+                         new double[]{4083.04, 4667.41, 4091.07, 4071.43}, 
                          new double[]{42.03, 47.18, 41, 44.63}, 1500, 500, 500);
                 break;
             case 10009:
                 processEmployee(10009, "Atienza, Rosie  ", "HR Rank and File", 
-                        LocalDate.of(1948, 9, 24), "12A/33 Upton Isle Apt. 420, Roxas City 1814 Surigao del Norte", 
-                        "983-606-799", "55-4476527-2", "211385556888", "545652640232", "888-572-294-000", 
-                         new double[]{4415.18, 4667.41, 4214.29, 4071.43}, 
-                         new double[]{42.03, 47.18, 41, 44.63}, 1500, 500, 500);
+                        LocalDate.of(1948, 9, 24), "90A Dibbert Terrace Apt. 190, San Lorenzo 6056 Davao del Norte", 
+                        "266-036-427", "41-0644692-3", "260107732354", "708988234853", "604-997-793-000", 
+                         new double[]{6184.52, 4595.98, 4267.86, 4091.52}, 
+                         new double[]{44.93, 45.77, 46.15, 44.67}, 1500, 500, 500);
+                break;
+            case 10010:
+                processEmployee(10010, "Alvaro, Roderick  ", "Accounting Head", 
+                        LocalDate.of(1988, 3, 30), "#284 T. Morato corner, Scout Rallos Street, Quezon City", 
+                        "053-381-386", "64-7605054-4", "799254095212", "578114853194", "525-420-419-000", 
+                         new double[]{10445.17, 8657.11, 8571.42, 9871.44}, 
+                         new double[]{43.92, 46.32, 42.12, 37.90}, 1500, 1000, 1000);
                 break;
             default:
                 System.out.println("Employee not found.");
