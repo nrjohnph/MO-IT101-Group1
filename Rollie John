@@ -71,7 +71,7 @@ public class EmployeesPayroll {
                 break;
             case 10009:
                 processEmployee(10009, "Atienza, Rosie  ", "HR Rank and File", 
-                        LocalDate.of(1948, 09, 24), "12A/33 Upton Isle Apt. 420, Roxas City 1814 Surigao del Norte", 
+                        LocalDate.of(1948, 9, 24), "12A/33 Upton Isle Apt. 420, Roxas City 1814 Surigao del Norte", 
                         "983-606-799", "55-4476527-2", "211385556888", "545652640232", "888-572-294-000", 
                          new double[]{4415.18, 4667.41, 4214.29, 4071.43}, 
                          new double[]{42.03, 47.18, 41, 44.63}, 1500, 500, 500);
