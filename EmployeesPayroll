@@ -62,6 +62,41 @@ public class EmployeesPayroll {
                         "053-381-386", "64-7605054-4", "799254095212", "578114853194", "525-420-419-000",
                         new double[]{10445.17, 8657.11, 8571.42, 9871.44},
                         new double[]{43.92, 46.32, 42.12, 37.90}, 1500, 1000, 1000);
+                case 10011 -> processEmployee(10011, "Salcedo, Anthony  ", "Payroll Manager",
+                        LocalDate.of(1993, 9, 14), "93/54 Shanahan Alley Apt. 183, Santo Tomas 1572 Masbate",
+                        "070-766-300", "26-9647608-3", "218002473454", "126445315651", "210-805-911-000",
+                        new double[]{9519.60, 10497.78, 8667.48, 9338.09},
+                        new double[]{47.08, 44.73, 43.82, 45.83}, 1500, 1000, 1000);
+                case 10012 -> processEmployee(10012, "Lopez, Josie ", "Payroll Team Leader",
+                        LocalDate.of(1987, 1, 14), "49 Springs Apt. 266, Poblacion, Taguig 3200 Occidental Mindoro",
+                        "478-355-427", "44-8563448-3", "113071293354", "431709011012", "218-489-737-000",
+                        new double[]{7000.31, 7065.6, 7127.04, 7076.65},
+                        new double[]{43.60, 41.07, 45.03, 44.98}, 1500, 800, 800);
+                case 10013 -> processEmployee(10013, "Farala, Martha", "Payroll Rank and File",
+                        LocalDate.of(1942, 1, 11), "42/25 Sawayn Stream, Ubay 1208 Zamboanga del Norte",
+                        "329-034-366", "45-5656375-0", "631130283546", "233693897247", "210-835-851-000",
+                        new double[]{4377.62, 4848.10, 4552.38, 4761.90},
+                        new double[]{44.70, 45.17, 49.80, 46.52}, 1500, 500, 500);
+                case 10014 -> processEmployee(10014, "Martinez, Leila", "Payroll Rank and File",
+                        LocalDate.of(1970, 7, 11), "37/46 Kulas Roads, Maragondon 0962 Quirino ",
+                        "877-110-749", "27-2090996-4", "101205445886", "515741057496", "275-792-513-000",
+                        new double[]{4995.00, 4109.52, 4450.00, 3991.90},
+                        new double[]{44.67, 51.73, 45.67, 43.42}, 1500, 500, 500);
+                case 10015 -> processEmployee(10015, "Romualdez, Fredrick ", "Account Manager",
+                        LocalDate.of(1985, 3, 10), "22A/52 Lubowitz Meadows, Pililla 4895 Zambales",
+                        "023-079-009", "26-8768374-1", "223057707853", "308366860059", "598-065-761-000",
+                        new double[]{11113.99, 10694.669, 10392.16, 9415.58},
+                        new double[]{48.57, 45.00, 48.65, 46.03}, 1500, 1000, 1000);
+                case 10016 -> processEmployee(10016, "Mata, Christian", "Account Team Leader",
+                        LocalDate.of(1987, 10, 21), "90 O'Keefe Spur Apt. 379, Catigbian 2772 Sulu",
+                        "783-776-744", "49-2959312-6", "631052853464", "824187961962", "103-100-522-000",
+                        new double[]{7663.02, 7484.81, 8847.39, 9170.56},
+                        new double[]{42.87, 44.25, 48.45, 46.80}, 1500, 800, 800);
+                case 10017 -> processEmployee(10017, "De Leon, Selena", "Account Team Leader",
+                        LocalDate.of(1975, 2, 20), "89A Armstrong Trace, Compostela 7874 Maguindanao",
+                        "975-432-139", "27-2090208-8", "719007608464", "482-259-498-000", "103-100-522-000",
+                        new double[]{8307.72, 7673.33, 7837.74, 8868.21},
+                        new double[]{43.10, 43.57, 44.98, 44.75}, 1500, 800, 800);
                 default -> System.out.println("Employee not found.");
             }
         }
